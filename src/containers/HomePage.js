@@ -6,7 +6,7 @@ class App extends Component {
   render() {
     return(
         <div>
-            <p>This is where the home page is loaded.</p>
+            <p>H O M E.</p>
         </div>
     )
   };
