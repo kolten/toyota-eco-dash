@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './containers/App';
+import App from './Containers/App';
 import './index.css';
-import HomePage from './containers/HomePage';
+import HomePage from './Containers/HomePage';
 import {
   BrowserRouter as Router,
   Route
