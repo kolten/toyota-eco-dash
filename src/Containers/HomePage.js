@@ -20,6 +20,7 @@ class App extends Component {
         this.setState({
           data:{
             score: parseFloat(response2.myScore).toFixed(2),
+	          avgScore: parseFloat(response2.otherScore).toFixed(2),
           }
         })
       })
