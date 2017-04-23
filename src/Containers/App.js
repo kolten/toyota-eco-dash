@@ -114,10 +114,10 @@ class App extends Component {
           onClick = {this.reset}
           > button </button>
 
-          <a href="/home">
-          <button 
-          text ="Park"
-          > Park </button>
+          <a href="./home">
+            <button className="fab">
+              <i className="material-icons md-48">exit_to_app</i>
+            </button>
           </a>
 
           {this.renderTopNums()}
