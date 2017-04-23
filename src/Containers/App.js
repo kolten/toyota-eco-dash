@@ -106,26 +106,28 @@ class App extends Component {
 
   render() {
     return(
-      <div className="mainContainer">
-        <div className="backgroundIMG"></div>
-        <button 
-        text =" reset"
-        onClick = {this.reset}
-        > button </button>
+      <div className="secondayContainer">
+        <div className="mainContainer">
+          <div className="backgroundIMG"></div>
+          <button 
+          text =" reset"
+          onClick = {this.reset}
+          > button </button>
 
-        <a href="/home">
-        <button 
-        text ="Park"
-        > Park </button>
-        </a>
+          <a href="/home">
+          <button 
+          text ="Park"
+          > Park </button>
+          </a>
 
-        {this.renderTopNums()}
-        <div className="myChart">
-          <Chart
+          {this.renderTopNums()}
+          <div className="myChart">
+            <Chart
 
-          data = {this.state.data}></Chart>
-        </div>
-        {this.renderBotNums()}
+            data = {this.state.data}></Chart>
+          </div>
+          {this.renderBotNums()}
+      </div>
     </div>
     )
   };

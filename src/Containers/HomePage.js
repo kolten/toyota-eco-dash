@@ -42,39 +42,25 @@ class App extends Component {
 
   render() {
     return(
-<div id="container" >
-  <div id="top">
-    <div className="left" id="music">
-      <div className="label">My Score</div>
-      <div className="content"><span className="num">{this.state.data.score}</span>
+<div className="homebackground">
+  <div id="container">
+    <div id="dashboard"></div>
+    <div className="cardContainer">
+      <div className="cardScore">
+        <h1>SCORE</h1>
+        <h3>{this.state.data.score}</h3>
       </div>
-    </div>
-    <div className="right" id="speed">
-      <div className="label">Other Score</div>
-      <div className="content"><span className="num">this.props.data.myScore</span>
+      <div className="cardScore">
+        <h1>ADV. SPEED</h1>
+        <h3>36 MPH</h3>
       </div>
-    </div>
-  </div>
-  <div id="bottom">
-    <div className="left" id="temp">
-      <div className="icon ion-thermometer"></div>
-      <div className="label">Temperature</div>
-      <div className="content"><span className="num">68</span>
-        <div className="type">Fahrenheit</div>
+      <div className="cardScore">
+        <h1>FUEL USED</h1>
+        <h3>0.2 GALLONS</h3>
       </div>
-    </div>
-    <div className="middle" id="nav">
-      <div className="icon ion-map"></div>
-      <div className="label">Navigation</div>
-      <div className="content"><span className="num">6.2</span>
-        <div className="type">Miles to Destination</div>
-      </div>
-    </div>
-    <div className="right" id="fuel">
-      <div className="icon maki-fuel"></div>
-      <div className="label">Fuel Remaining</div>
-      <div className="content"><span className="num">345</span>
-        <div className="type">Miles to Empty</div>
+      <div className="cardScore">
+        <h1>ADV. B.P.</h1>
+        <h3>0.01 Pa</h3>
       </div>
     </div>
   </div>

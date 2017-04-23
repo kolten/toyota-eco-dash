@@ -32,7 +32,7 @@
 }
 
 .backgroundIMG{
-    background-color: black;
+    background-color: grey;
     background:url('../res/aaron-burden-38414.jpg') no-repeat center;
     background-size:cover;
     -webkit-filter: blur(7px);
@@ -51,9 +51,6 @@
 }
 
 
-body{
-  background-color: black;
-}
 
 
 
@@ -90,4 +87,11 @@ body{
 .mainContainer{
   width:75%;
   margin: 0 auto;
+}
+.secondayContainer{
+  width:100%;
+  height:100vh;
+  background-color:black;
+  z-index:-999;
+  position: absolute;
 }
