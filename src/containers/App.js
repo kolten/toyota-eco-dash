@@ -1,6 +1,5 @@
 import React, {Component} from 'react'
 import './App.css';
-import Chart from '../Component/ChartComponent'
 import DriveGraph from "../Component/ReactChartComponent"
 
 class App extends Component {
