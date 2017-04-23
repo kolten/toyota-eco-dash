@@ -7,7 +7,8 @@ class App extends Component {
 		super(props);
 		this.state={
 			data:{
-				score:1
+				score:1,
+        avgScore:1,
 			}
 		}
 		
@@ -21,7 +22,7 @@ class App extends Component {
         this.setState({
           data:{
             score: parseFloat(response2.myScore).toFixed(2),
-	          avgScore: parseFloat(response2.otherScore).toFixed(2),
+	          avgScore: parseFloat(response2.theirScore).toFixed(2),
           }
         })
       })
@@ -53,20 +54,25 @@ class App extends Component {
         <h3>{this.state.data.score}</h3>
         <img src="http://orig07.deviantart.net/9167/f/2016/299/2/c/emojis_de_facebook_nuevos_en_png_49_by_imagenes_en_png-damc73k.png"/>
       </div>
-      <div className="cardScore animated bounceInRight">
-        <h1>ADV. SPEED</h1>
+      <div className="cardScore">
+        <h1>OTHER'S SCORE</h1>
+        <div className="divider"/>
+        <h3>{this.state.data.avgScore}</h3>
+      </div>
+      <div className="cardScore">
+        <h1>AVG. SPEED</h1>
         <div className="divider"/>
         <h3>36 MPH</h3>
       </div>
-      <div className="cardScore animated bounceInRight">
+      <div className="cardScore">
         <h1>FUEL USED</h1>
         <div className="divider"/>
         <h3>0.2 GALLONS</h3>
       </div>
-      <div className="cardScore animated bounceInDown">
+      <div className="cardScore">
         <h1>ADV. B.P.</h1>
         <div className="divider"/>
-        <h3>0.01 Pa</h3>
+        <h3>0.01 mPa</h3>
       </div>
     </div>
   </div>
