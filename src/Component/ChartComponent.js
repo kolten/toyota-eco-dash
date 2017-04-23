@@ -12,21 +12,36 @@ export default class MyChart extends Component{
         this.state = {
             data: {
                 date: new Date(),
-                Car: Math.floor(Math.random() * 6) + 1,
-                Bus: Math.floor(Math.random() * 6) + 1   
+                Score: Math.floor(Math.random() * 6) + 1,
+                Adverage: Math.floor(Math.random() * 6) + 1   
             }
         };
     }
 
-    newDataUpdate(){
-
-        this.setState({
-            data: {
+    getData = () =>{
+        fetch('http://54.200.73.111:8080/data')
+        .then( (data) => {
+            console.log(data);
+            console.log('success',JSON.parse(data.body));
+            this.setState({data:{
                 date: new Date(),
-                Car: Math.floor(Math.random() * 6) + 1,
-                Bus: Math.floor(Math.random() * 6) + 1
-            }
-        });
+                Score: data.myScore,
+                Adverage:data.theirScore
+
+            }})
+        })
+    }
+
+    newDataUpdate(){
+        
+        this.getData();
+        // this.setState({
+        //     data: {
+        //         date: new Date(),
+        //         Score: Math.floor(Math.random() * 6) + 1,
+        //         Adverage: Math.floor(Math.random() * 6) + 1
+        //     }
+        // });
          
     }
     
@@ -38,12 +53,12 @@ export default class MyChart extends Component{
 
     render() {
         var flow = {
-                duration: 1
+                duration: 0
         };
     
         return <RTChart
                 flow={flow}
-                fields={['Car','Bus']}
+                fields={['Score','Adverage']}
                 data={this.state.data} 
                 maxValues={6}/>
         }
