@@ -23,6 +23,11 @@ export default class MyChart extends Component{
         fetch('http://54.200.73.111:8080/data')
         .then( (data) => {
             return data.json();
+
+            console.log(data);
+            console.log('success',data.json);
+
+
         }).then( (response) => {
             response.forEach( (response2) => {
                 console.log("hi");
@@ -32,6 +37,7 @@ export default class MyChart extends Component{
                     date: new Date(),
                     Score: parseFloat(response2.myScore),
                     Adverage: parseFloat(response2.theirScore)
+
                 }
             })
             })

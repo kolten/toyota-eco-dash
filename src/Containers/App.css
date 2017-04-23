@@ -79,3 +79,8 @@ body{
 .score-container{
   margin: 0 auto;
 }
+
+.score-flex{
+  display:flex
+  
+}

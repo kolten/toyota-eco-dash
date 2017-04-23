@@ -23,11 +23,13 @@ class App extends Component {
         text =" reset"
         onClick = {this.reset}
         > button </button>
-        <div className="score-container">
-          <h1>SCORE 1</h1>
-        </div>
-        <div className="score-container">
-          <h1>SCORE 1</h1>
+        <div className="score-flex">
+          <div className="score-container">
+            <h1>SCORE 1</h1>
+          </div>
+          <div className="score-container">
+            <h1>SCORE 2</h1>
+          </div>
         </div>
         <div className="myChart">
           <Chart></Chart>
