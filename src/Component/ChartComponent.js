@@ -21,20 +21,32 @@ export default class MyChart extends Component{
     getData = () =>{
         fetch('http://54.200.73.111:8080/data')
         .then( (data) => {
+            return data.json();
             console.log(data);
-            console.log('success',JSON.parse(data.body));
+            console.log('success',data.json);
+
+
             this.setState({data:{
                 date: new Date(),
                 Score: data.myScore,
                 Adverage:data.theirScore
 
             }})
+        }).then( (response) => {
+            console.log(response)
+            this.setState({
+                data:{
+                    date: new Date(),
+                    score: response.myScore,
+                    Adverage: response.theirScore
+                }
+            })
         })
     }
 
     newDataUpdate(){
         
-        this.getData();
+        this.getData()
         // this.setState({
         //     data: {
         //         date: new Date(),
