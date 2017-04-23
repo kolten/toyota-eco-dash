@@ -21,11 +21,16 @@ export default class MyChart extends Component{
         var flow = {
             duration: 0
         };
-        return <RTChart
-            flow={flow}
-            fields={['Score','Adverage']}
-            data={this.props.data} 
-            maxValues={6}/>
+        return (
+            <div>
+                <h1 className="chartTitle">SCORE GRAPH</h1>
+                <RTChart
+                flow={flow}
+                fields={['Score','Adverage']}
+                data={this.props.data} 
+                maxValues={6}/>
+            </div>
+        )
         }
 
 }

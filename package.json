@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "chart.js": "^2.5.0",
+    "particles.js": "^2.0.0",
     "react": "^15.5.4",
     "react-chartjs-2": "^2.0.5",
     "react-dom": "^15.5.4",

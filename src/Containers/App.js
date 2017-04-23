@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import './App.css';
 import Chart from '../Component/ChartComponent'
 import image from '../res/aaron-burden-38414.jpg'
+import '../animate.css'
 
 
 
@@ -28,11 +29,11 @@ class App extends Component {
  renderTopNums(){
    return(
     <div className="score-flex">
-      <div className="score-container">
-        <h1>MY SCORE</h1>
+      <div className="score-container animated bounceInDown">
+        <h1>MY <br/>SCORE</h1>
         <h2>{this.state.data.Score}</h2>
       </div>
-      <div className="score-container">
+      <div className="score-container animated bounceInDown">
         <h1>OTHER SCORE</h1>
         <h2>{this.state.data.Adverage}</h2>
       </div>
@@ -41,9 +42,11 @@ class App extends Component {
    )
  }
  renderBotNums(){
+   let customStyle = this.state.data.efficiency > 1.4 ? {color: "red"} : {color: "black"};
+   let customClass = "item-container unit "+ (this.state.data.efficiency > 1.4 ? "animated shake" : "")
    return(
-    <div className="flexContainer">
-      <div className="item-container unit">
+    <div className="flexContainer animated bounceInUp">
+      <div className="item-container unit animated bounceInUp">
         <h5>SPEED</h5>
         <h1>{this.state.data.speed}</h1>
         <h5 className="unit">MPH</h5>
@@ -54,11 +57,11 @@ class App extends Component {
         <h1>{this.state.data.rpm}</h1>
         <h5 className="unit">RPM</h5>
       </div>
-      <div className="item-container unit">
-        <h5>EFFICIENCY</h5>
-        <h1>{this.state.data.efficiency}</h1>
-        <h5 className="unit">MPH</h5>
-      </div>
+      <div className={customClass} style={customStyle}>
+        <h5 style={customStyle}>EFFICIENCY</h5>
+        <h1 style={customStyle}>{this.state.data.efficiency}</h1>
+        <h5 className="unit" style={customStyle}>MPG</h5>
+      </div> 
     </div>
       
    )
@@ -110,13 +113,13 @@ class App extends Component {
         <div className="mainContainer">
           <div className="backgroundIMG"></div>
           <a href="./home">
-            <button className="fab">
+            <button className="fab animated bounceInRight">
               <i className="material-icons md-48">exit_to_app</i>
             </button>
           </a>
 
           {this.renderTopNums()}
-          <div className="myChart">
+          <div className="myChart animated bounceInLeft">
             <Chart
 
             data = {this.state.data}></Chart>

@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import './HomePage.css';
+import '../animate.css'
 
 class App extends Component {
 	constructor(props){
@@ -45,27 +46,27 @@ class App extends Component {
 <div className="homebackground">
   <div id="container">
     <div id="dashboard"></div>
-    <div className="cardContainer">
+    <div className="cardContainer animated bounceInRight">
       <div className="cardScore">
         <h1>SCORE</h1>
         <h3>{this.state.data.score}</h3>
       </div>
-      <div className="cardScore">
+      <div className="cardScore animated bounceInRight">
         <h1>ADV. SPEED</h1>
         <h3>36 MPH</h3>
       </div>
-      <div className="cardScore">
+      <div className="cardScore animated bounceInRight">
         <h1>FUEL USED</h1>
         <h3>0.2 GALLONS</h3>
       </div>
-      <div className="cardScore">
+      <div className="cardScore animated bounceInDown">
         <h1>ADV. B.P.</h1>
         <h3>0.01 Pa</h3>
       </div>
     </div>
   </div>
   <a href="./">
-    <button className="fab">
+    <button className="fab animated bounceInDown">
       <i className="material-icons md-48">directions_car</i>
     </button>
   </a>
