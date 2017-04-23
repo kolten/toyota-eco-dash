@@ -6,9 +6,23 @@ import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend} from 're
 
 export default class DriveGraph extends Component{
 
-    render(){
+    constructor(props){
+      super(props);
+      this.state = {
+        data: props.data
+      }
+    }
 
-        const data = [
+    componentWillReceiveProps(nextProps) {
+      console.log("updating state to ",nextProps);
+      this.setState({nextProps});
+    }
+
+
+    render(){
+        /*
+        const {
+            data = [
             {name: '1', uv: 4000, pv: 2400, amt: 2400},
             {name: '2', uv: 3000, pv: 1398, amt: 2210},
             {name: '3', uv: 2000, pv: 9800, amt: 2290},
@@ -16,14 +30,16 @@ export default class DriveGraph extends Component{
             {name: '5', uv: 1890, pv: 4800, amt: 2181},
             {name: '6', uv: 2390, pv: 3800, amt: 2500},
             {name: '7', uv: 3490, pv: 4300, amt: 2100},
-        ];
+        ]};
+        */
 
 
 
 
-
+        console.log("rendering",this.state.data);
         return(
-            <LineChart width={600} height={300} data={data} margin={{top: 5, right: 30, left: 20, bottom: 5}}>
+          <div>
+            <LineChart width={600} height={300} data={this.state.data} margin={{top: 5, right: 30, left: 20, bottom: 5}}>
                 <XAxis dataKey="name"/>
                 <YAxis/>
                 <CartesianGrid strokeDasharray="3 3"/>
@@ -32,6 +48,8 @@ export default class DriveGraph extends Component{
                 <Line type="monotone" dataKey="pv" stroke="#8884d8" dot={<CustomizedDot />}/>
                 <Line type="monotone" dataKey="uv" stroke="#82ca9d" />
             </LineChart>
+            {this.state.data[this.state.data.length-1].name}
+          </div>
 
         )
     }
