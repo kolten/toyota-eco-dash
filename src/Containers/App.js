@@ -69,18 +69,14 @@ class App extends Component {
       return data.json();
     })
       .then( (response) => {
-        console.log("pre rep");
-        console.log(response);
         response.forEach( (response2) => {
-        console.log("hi");
-        console.log(response2);
-        console.log(this.state);
         this.setState({
-          date: new Date(),
-          Score: parseFloat(response2.myScore),
-          Adverage: parseFloat(response2.theirScore)
+          data:{
+            date: new Date(),
+            Score: parseFloat(response2.myScore),
+            Adverage: parseFloat(response2.theirScore)
+          }
         })
-        console.log(this.state);
         // console.log(self.state.Score,self.state.Adverage)
         //   self.setState({
         //   date: new Date(),
@@ -113,7 +109,8 @@ class App extends Component {
         {this.renderTopNums()}
         <div className="myChart">
           <Chart
-          data = {this.state}></Chart>
+
+          data = {this.state.data}></Chart>
         </div>
         {this.renderBotNums()}
     </div>

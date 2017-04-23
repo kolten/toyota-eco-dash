@@ -8,29 +8,23 @@ import "./ChartComponent.css"
 export default class MyChart extends Component{
     constructor(props){
         super(props);
-        console.log("printing props");
-        console.log(props); 
-        this.state = this.props;
-    }
-    componentWillReceiveProps(nextProps){
-        console.log("will rec props");
-        console.log(nextProps, this.state);
-        if(this.state != nextProps){
-            this.setState({nextProps})
-        }
-    }
-
+        this.state ={ 
+            data:{
+                date: new Date(),
+                Score : 0,
+                Adverage: 0
+            }}
+        }   
 
 
     render() {
         var flow = {
-                duration: 0
+            duration: 0
         };
-    
         return <RTChart
             flow={flow}
             fields={['Score','Adverage']}
-            data={this.state} 
+            data={this.props.data} 
             maxValues={6}/>
         }
 
