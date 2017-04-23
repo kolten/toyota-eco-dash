@@ -1,3 +1,5 @@
+@import url(http://weloveiconfonts.com/api/?family=maki);
+
 .App {
   text-align: center;
 }
@@ -24,5 +26,56 @@
 }
 
 .myChart{
-  width:50% ;
+    width: 900px;
+    margin: 0 auto; 
+    padding: 4%
+}
+
+.backgroundIMG{
+    background-color: black;
+    background:url('../res/aaron-burden-38414.jpg') no-repeat center;
+    background-size:cover;
+    -webkit-filter: blur(7px);
+    -moz-filter: blur(7px);
+    -o-filter: blur(7px);
+    -ms-filter: blur(7px);
+    filter: blur(7px);
+    position: absolute;
+    left:12.5%;
+    top: 0;
+    width:75%;
+    height:100%;
+    border-radius: 40%;
+    margin: 0 auto;
+    z-index: -15;
+}
+
+
+body{
+  background-color: black;
+}
+
+
+
+
+.flexContainer{
+  display:flex;
+  justify-content:space-around;
+  font-family: 'maki', sans-serif;
+  color: seashell;
+
+  
+}
+
+.item-container{
+  text-align:center;
+  width:20%;
+}
+
+.unit{
+  color:#917458
+}
+
+.score-container{
+  margin: 0 auto;
 }

@@ -9,6 +9,7 @@ export default class MyChart extends Component{
     constructor(props){
         super(props);
         // state : Object { "data"} 
+
         this.state = {
             data: {
                 date: new Date(),
@@ -22,25 +23,19 @@ export default class MyChart extends Component{
         fetch('http://54.200.73.111:8080/data')
         .then( (data) => {
             return data.json();
-            console.log(data);
-            console.log('success',data.json);
-
-
-            this.setState({data:{
-                date: new Date(),
-                Score: data.myScore,
-                Adverage:data.theirScore
-
-            }})
         }).then( (response) => {
-            console.log(response)
-            this.setState({
+            response.forEach( (response2) => {
+                console.log("hi");
+                console.log(this.state.data.Score,this.state.data.Adverage)
+               this.setState({
                 data:{
                     date: new Date(),
-                    score: response.myScore,
-                    Adverage: response.theirScore
+                    Score: parseFloat(response2.myScore),
+                    Adverage: parseFloat(response2.theirScore)
                 }
             })
+            })
+         
         })
     }
 

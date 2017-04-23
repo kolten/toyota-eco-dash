@@ -1,16 +1,21 @@
 /*-- Chart --*/
+text{
+  color:#fff
+}
+
 .c3 svg {
   font: 10px sans-serif;
   -webkit-tap-highlight-color: transparent; }
 
 .c3 path, .c3 line {
   fill: none;
-  stroke: #000; }
+  stroke: #FFF; }
 
 .c3 text {
   -webkit-user-select: none;
   -moz-user-select: none;
-  user-select: none; }
+  user-select: none;
+  color:#fff }
 
 .c3-legend-item-tile,
 .c3-xgrid-focus,
@@ -28,6 +33,9 @@
 
 /*-- Axis --*/
 /*-- Grid --*/
+.c3-axis{
+  color:#fff
+}
 .c3-grid line {
   stroke: #aaa; }
 
