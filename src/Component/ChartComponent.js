@@ -25,20 +25,13 @@ export default class MyChart extends Component{
             console.log(data);
             console.log('success',data.json);
 
-
-            this.setState({data:{
-                date: new Date(),
-                Score: data.myScore,
-                Adverage:data.theirScore
-
-            }})
         }).then( (response) => {
             console.log(response)
             this.setState({
                 data:{
                     date: new Date(),
-                    score: response.myScore,
-                    Adverage: response.theirScore
+                    score: Number(response.myScore),
+                    Adverage: Number(response.theirScore)
                 }
             })
         })
