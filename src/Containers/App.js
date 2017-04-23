@@ -14,6 +14,45 @@ class App extends Component {
 
  }
 
+ renderTopNums(){
+   return(
+    <div className="score-flex">
+      <div className="score-container">
+        <h1>SCORE 1</h1>
+        <h2>Data1</h2>
+      </div>
+      <div className="score-container">
+        <h1>SCORE 2</h1>
+        <h2>Data2</h2>
+      </div>
+    </div>
+
+   )
+ }
+ renderBotNums(){
+   return(
+    <div className="flexContainer">
+      <div className="item-container">
+        <h5>SPEED</h5>
+        <h1>DATA</h1>
+        <h5 className="unit">MPH</h5>
+        
+      </div>
+      <div className="item-container">
+        <h5>ENGINE</h5>
+        <h1>DATA</h1>
+        <h5 className="unit">RPM</h5>
+      </div>
+      <div className="item-container">
+        <h5>EFFICIENCY</h5>
+        <h1>DATA</h1>
+        <h5 className="unit">MPH</h5>
+      </div>
+    </div>
+      
+   )
+ }
+
 
   render() {
     return(
@@ -23,38 +62,12 @@ class App extends Component {
         text =" reset"
         onClick = {this.reset}
         > button </button>
-        <div className="score-flex">
-          <div className="score-container">
-            <h1>SCORE 1</h1>
-            <h2>Data1</h2>
-          </div>
-          <div className="score-container">
-            <h1>SCORE 2</h1>
-            <h2>Data2</h2>
-          </div>
-        </div>
+        {this.renderTopNums()}
         <div className="myChart">
           <Chart></Chart>
         </div>
-        <div className="flexContainer">
-          <div className="item-container">
-            <h5>SPEED</h5>
-            <h1>DATA</h1>
-            <h5 className="unit">MPH</h5>
-            
-          </div>
-          <div className="item-container">
-            <h5>ENGINE</h5>
-            <h1>DATA</h1>
-            <h5 className="unit">RPM</h5>
-          </div>
-          <div className="item-container">
-            <h5>EFFICIENCY</h5>
-            <h1>DATA</h1>
-            <h5 className="unit">MPH</h5>
-          </div>
-        </div>
-      </div>
+        {this.renderBotNums()}
+    </div>
     )
   };
 }

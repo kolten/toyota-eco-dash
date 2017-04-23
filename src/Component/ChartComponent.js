@@ -13,8 +13,8 @@ export default class MyChart extends Component{
         this.state = {
             data: {
                 date: new Date(),
-                Score: Math.floor(Math.random() * 6) + 1,
-                Adverage: Math.floor(Math.random() * 6) + 1   
+                Score: 0,
+                Adverage: 0 
             }
         };
     }
@@ -39,7 +39,7 @@ export default class MyChart extends Component{
                     Adverage: parseFloat(response2.theirScore)
 
                 }
-            })
+               })
             })
          
         })
