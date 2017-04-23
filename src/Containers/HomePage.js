@@ -55,6 +55,7 @@ class App extends Component {
       </div>
       <div className="cardScore">
         <h1>OTHER'S SCORE</h1>
+        <div className="divider"/>
         <h3>{this.state.data.avgScore}</h3>
       </div>
       <div className="cardScore">
@@ -70,7 +71,7 @@ class App extends Component {
       <div className="cardScore">
         <h1>ADV. B.P.</h1>
         <div className="divider"/>
-        <h3>0.01 Pa</h3>
+        <h3>0.01 mPa</h3>
       </div>
     </div>
   </div>
