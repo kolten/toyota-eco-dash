@@ -11,9 +11,11 @@ class App extends Component {
   constructor(props){
     super(props);
     this.state = {
-      date: new Date(),
-      Score: 0,
-      Adverage: 0 
+      data:{
+        date: new Date(),
+        Score: 0,
+        Adverage: 0 
+      }
     }
   }
 
@@ -27,12 +29,12 @@ class App extends Component {
    return(
     <div className="score-flex">
       <div className="score-container">
-        <h1>SCORE 1</h1>
-        <h2>Data1</h2>
+        <h1>My Score</h1>
+        <h2>{this.state.data.Score}</h2>
       </div>
       <div className="score-container">
-        <h1>SCORE 2</h1>
-        <h2>Data2</h2>
+        <h1>Other Score</h1>
+        <h2>{this.state.data.Adverage}</h2>
       </div>
     </div>
 
@@ -43,18 +45,18 @@ class App extends Component {
     <div className="flexContainer">
       <div className="item-container">
         <h5>SPEED</h5>
-        <h1>DATA</h1>
+        <h1>{this.state.data.speed}</h1>
         <h5 className="unit">MPH</h5>
         
       </div>
       <div className="item-container">
         <h5>ENGINE</h5>
-        <h1>DATA</h1>
+        <h1>{this.state.data.rpm}</h1>
         <h5 className="unit">RPM</h5>
       </div>
       <div className="item-container">
         <h5>EFFICIENCY</h5>
-        <h1>DATA</h1>
+        <h1>{this.state.data.efficiency}</h1>
         <h5 className="unit">MPH</h5>
       </div>
     </div>
@@ -70,11 +72,15 @@ class App extends Component {
     })
       .then( (response) => {
         response.forEach( (response2) => {
+          console.log(response2);
         this.setState({
           data:{
             date: new Date(),
-            Score: parseFloat(response2.myScore),
-            Adverage: parseFloat(response2.theirScore)
+            Score: parseFloat(response2.myScore).toFixed(2),
+            Adverage: parseFloat(response2.theirScore).toFixed(2),
+            speed: parseFloat(response2.speed).toFixed(2),
+            rpm: parseFloat(response2.rpm).toFixed(2),
+            efficiency: parseFloat(response2.fuelConsump).toFixed(2),
           }
         })
         // console.log(self.state.Score,self.state.Adverage)
@@ -94,7 +100,7 @@ class App extends Component {
  }
 
  componentDidMount() {
-  setInterval(() => this.newDataUpdate(), 6000);
+  setInterval(() => this.newDataUpdate(), 1000);
  }
 
 
@@ -106,6 +112,13 @@ class App extends Component {
         text =" reset"
         onClick = {this.reset}
         > button </button>
+
+        <a href="/home">
+        <button 
+        text ="Park"
+        > Park </button>
+        </a>
+
         {this.renderTopNums()}
         <div className="myChart">
           <Chart
