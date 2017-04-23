@@ -60,7 +60,7 @@ class App extends Component {
       <div className={customClass} style={customStyle}>
         <h5 style={customStyle}>EFFICIENCY</h5>
         <h1 style={customStyle}>{this.state.data.efficiency}</h1>
-        <h5 className="unit" style={customStyle}>MPG</h5>
+        <h5 className="unit" style={customStyle}>GPH</h5>
       </div> 
     </div>
       
