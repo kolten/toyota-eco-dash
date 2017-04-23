@@ -29,11 +29,11 @@ class App extends Component {
    return(
     <div className="score-flex">
       <div className="score-container">
-        <h1>My Score</h1>
+        <h1>My SCORE</h1>
         <h2>{this.state.data.Score}</h2>
       </div>
       <div className="score-container">
-        <h1>Other Score</h1>
+        <h1>OTHER SCORE</h1>
         <h2>{this.state.data.Adverage}</h2>
       </div>
     </div>
@@ -43,18 +43,18 @@ class App extends Component {
  renderBotNums(){
    return(
     <div className="flexContainer">
-      <div className="item-container">
+      <div className="item-container unit">
         <h5>SPEED</h5>
         <h1>{this.state.data.speed}</h1>
         <h5 className="unit">MPH</h5>
         
       </div>
-      <div className="item-container">
+      <div className="item-container unit">
         <h5>ENGINE</h5>
         <h1>{this.state.data.rpm}</h1>
         <h5 className="unit">RPM</h5>
       </div>
-      <div className="item-container">
+      <div className="item-container unit">
         <h5>EFFICIENCY</h5>
         <h1>{this.state.data.efficiency}</h1>
         <h5 className="unit">MPH</h5>
@@ -109,11 +109,6 @@ class App extends Component {
       <div className="secondayContainer">
         <div className="mainContainer">
           <div className="backgroundIMG"></div>
-          <button 
-          text =" reset"
-          onClick = {this.reset}
-          > button </button>
-
           <a href="./home">
             <button className="fab">
               <i className="material-icons md-48">exit_to_app</i>

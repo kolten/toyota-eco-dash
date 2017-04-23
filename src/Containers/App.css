@@ -26,14 +26,18 @@
 }
 
 .myChart{
-    width: 900px;
-    margin: 0 auto; 
-    padding: 4%
+    width: 70%;
+    margin-left: 15%;
+    background: #f9f9f9;
+    border-radius: 2px;
+    display: inline-block;
+    height: 310px;
+    position: relative;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    text-align: center;
 }
 
 .backgroundIMG{
-    background-color: grey;
-    background:url('../res/aaron-burden-38414.jpg') no-repeat center;
     background-size:cover;
     -webkit-filter: blur(7px);
     -moz-filter: blur(7px);
@@ -65,22 +69,37 @@
 }
 
 .item-container{
-  text-align:center;
-  width:20%;
+  background: #f9f9f9;
+  border-radius: 2px;
+  display: inline-block;
+  height: 220px;
+  margin: 1rem;
+  position: relative;
+  width: 220px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  text-align: center;
 }
 
 .unit{
-  color:#917458
+  color:#212121
 }
 
 .score-container{
-  margin: 0 auto;
+  background: #f9f9f9;
+  border-radius: 2px;
+  display: inline-block;
+  height: 220px;
+  margin: 1rem;
+  position: relative;
+  width: 220px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  text-align: center;
+  margin:0 auto;
 }
 
 .score-flex{
   display:flex;
   padding:20px;
-  padding-top: 40px;
   text-align: center;
 }
 
@@ -91,7 +110,9 @@
 .secondayContainer{
   width:100%;
   height:100vh;
-  background-color:black;
+  background-image: url("http://oxygennacdn3.oxygenna.com/wp-content/uploads/2015/11/18.jpg");
+  background-size: cover;
+  background-color:#CCC;
   z-index:-999;
   position: absolute;
 }
@@ -130,7 +151,7 @@
     border:none;
     font-size:1.5em;
     color:white;
-    background-color: #ff4081;
+    background-color: #4389fe;
     border-radius: 50%;
     width: 100px;
     height: 100px;
@@ -138,4 +159,9 @@
     -webkit-box-shadow: 2px 3px 3px 0px rgba(41, 41, 41, .3);
        -moz-box-shadow: 2px 3px 3px 0px rgba(41, 41, 41, .3);
             box-shadow: 2px 3px 3px 0px rgba(41, 41, 41, .3);
+}
+
+
+h1{
+  color:#212121
 }
