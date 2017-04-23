@@ -59,7 +59,7 @@ class App extends Component {
         <h3>{this.state.data.avgScore}</h3>
       </div>
       <div className="cardScore">
-        <h1>ADV. SPEED</h1>
+        <h1>AVG. SPEED</h1>
         <div className="divider"/>
         <h3>36 MPH</h3>
       </div>
