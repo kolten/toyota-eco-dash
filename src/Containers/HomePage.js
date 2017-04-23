@@ -7,7 +7,8 @@ class App extends Component {
 		super(props);
 		this.state={
 			data:{
-				score:1
+				score:1,
+        avgScore:1,
 			}
 		}
 		
@@ -21,7 +22,7 @@ class App extends Component {
         this.setState({
           data:{
             score: parseFloat(response2.myScore).toFixed(2),
-	          avgScore: parseFloat(response2.otherScore).toFixed(2),
+	          avgScore: parseFloat(response2.theirScore).toFixed(2),
           }
         })
       })
@@ -51,15 +52,19 @@ class App extends Component {
         <h1>SCORE</h1>
         <h3>{this.state.data.score}</h3>
       </div>
-      <div className="cardScore animated bounceInRight">
+      <div className="cardScore">
+        <h1>OTHER'S SCORE</h1>
+        <h3>{this.state.data.avgScore}</h3>
+      </div>
+      <div className="cardScore">
         <h1>ADV. SPEED</h1>
         <h3>36 MPH</h3>
       </div>
-      <div className="cardScore animated bounceInRight">
+      <div className="cardScore">
         <h1>FUEL USED</h1>
         <h3>0.2 GALLONS</h3>
       </div>
-      <div className="cardScore animated bounceInDown">
+      <div className="cardScore">
         <h1>ADV. B.P.</h1>
         <h3>0.01 Pa</h3>
       </div>
