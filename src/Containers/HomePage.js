@@ -51,6 +51,7 @@ class App extends Component {
         <h1>SCORE</h1>
         <div className="divider"/>
         <h3>{this.state.data.score}</h3>
+        <img src="http://orig07.deviantart.net/9167/f/2016/299/2/c/emojis_de_facebook_nuevos_en_png_49_by_imagenes_en_png-damc73k.png"/>
       </div>
       <div className="cardScore animated bounceInRight">
         <h1>ADV. SPEED</h1>
