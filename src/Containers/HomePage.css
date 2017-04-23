@@ -184,6 +184,9 @@
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
   text-align: center;
 }
+.cardScore h3{
+  font-size:1.4em;
+}
 
 
 .fab {
@@ -232,4 +235,12 @@
 
 h1{
     color: #212121
+}
+
+
+.divider{
+  height: 1px;
+  background-color: #333;
+  width:90%;
+  margin:0 auto;
 }

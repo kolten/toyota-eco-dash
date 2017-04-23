@@ -49,23 +49,27 @@ class App extends Component {
     <div className="cardContainer animated bounceInRight">
       <div className="cardScore">
         <h1>SCORE</h1>
+        <div className="divider"/>
         <h3>{this.state.data.score}</h3>
       </div>
       <div className="cardScore animated bounceInRight">
         <h1>ADV. SPEED</h1>
+        <div className="divider"/>
         <h3>36 MPH</h3>
       </div>
       <div className="cardScore animated bounceInRight">
         <h1>FUEL USED</h1>
+        <div className="divider"/>
         <h3>0.2 GALLONS</h3>
       </div>
       <div className="cardScore animated bounceInDown">
         <h1>ADV. B.P.</h1>
+        <div className="divider"/>
         <h3>0.01 Pa</h3>
       </div>
     </div>
   </div>
-  <a href="./">
+  <a div className="divider" href="./">
     <button className="fab animated bounceInDown">
       <i className="material-icons md-48">directions_car</i>
     </button>
