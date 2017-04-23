@@ -8,7 +8,8 @@
     "react-chartjs-2": "^2.0.5",
     "react-dom": "^15.5.4",
     "react-router-dom": "^4.1.1",
-    "react-routing": "0.0.7"
+    "react-routing": "0.0.7",
+    "recharts": "^0.22.3"
   },
   "devDependencies": {
     "react-scripts": "0.9.5"

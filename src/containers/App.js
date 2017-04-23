@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import './App.css';
 import Chart from '../Component/ChartComponent'
+import DriveGraph from "../Component/ReactChartComponent"
 
 class App extends Component {
 
@@ -8,7 +9,7 @@ class App extends Component {
     return(
       <div>
         <h1>Testing Chart</h1>
-        <Chart></Chart>
+        <DriveGraph></DriveGraph>
       </div>
     )
   };
