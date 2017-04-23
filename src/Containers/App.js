@@ -29,7 +29,7 @@ class App extends Component {
    return(
     <div className="score-flex">
       <div className="score-container">
-        <h1>My SCORE</h1>
+        <h1>MY SCORE</h1>
         <h2>{this.state.data.Score}</h2>
       </div>
       <div className="score-container">
